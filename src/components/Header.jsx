@@ -11,10 +11,10 @@ export default function Header({beers}){
         <div className="header h-screen w-full flex relative overflow-hidden ">
             <div className="left w-1/2 bg-dark-blue flex justify-center items-center text-white flex-col gap-14 relative ">
                 <div className="text flex flex-col items-center ">
-                    <h1 className="text-8xl font-bold tracking-wider">RADICAL</h1>
-                    <h1 className="text-8xl font-bold tracking-wider">BEER FOR</h1>
-                    <h1 className="text-8xl font-bold tracking-wider">RADICAL</h1>
-                    <h1 className="text-8xl font-bold tracking-wider">PEOPLE</h1>
+                    <h1 className="text-8xl font-semibold tracking-wider">RADICAL</h1>
+                    <h1 className="text-8xl font-semibold tracking-wider">BEER FOR</h1>
+                    <h1 className="text-8xl font-semibold tracking-wider">RADICAL</h1>
+                    <h1 className="text-8xl font-semibold tracking-wider">PEOPLE</h1>
                 </div>
                 <div className="discover flex items-center py-2 px-4 rounded-xl bg-yellow gap-2">
                     <p className="text-xl font-bold text-dark-blue">DESCOPERA</p>

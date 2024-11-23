@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        onest: ["Onest", "sans-serif"],
+        coustard : ["Coustard", "sans-serif"],
+      },
+      backgroundImage:{
+        'light' : "url('/assets/BackBG.png')"
+      }
+    },
     colors:{
       'dark-blue' : '#000814',
       'white' : '#fff',

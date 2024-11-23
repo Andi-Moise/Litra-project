@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import About from "../components/About"
 
 export default function Home(){
     const [beers, setBeers] = useState(null)
@@ -21,6 +22,7 @@ export default function Home(){
                 <div >
                     <Navbar />
                     <Header beers={beers.slice(0,5)}/>
+                    <About/>
                     {/* {
                         beers.map(item => (<div>
                             <Link to={`/beer/${item.slug}`}>{item.name}</Link>
