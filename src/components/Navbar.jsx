@@ -18,7 +18,7 @@ export default function Navbar(){
                         <p className="font-medium">EVENTS</p>
                         <FaPlus className="text-sm text-yellow" />
                     </Link>
-                    <Link to={""} className="flex items-center gap-1 text-white">
+                    <Link to={"/gallery"} className="flex items-center gap-1 text-white">
                         <p className="font-medium">GALLERY</p>
                         <FaPlus className="text-sm text-yellow" />
                     </Link>

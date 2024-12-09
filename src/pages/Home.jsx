@@ -6,6 +6,9 @@ import Navbar from "../components/Navbar"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import About from "../components/About"
+import Slider from "../components/Slider"
+import Bento from "../components/Bento"
+import Empty from "../components/Empty"
 
 export default function Home(){
     const [beers, setBeers] = useState(null)
@@ -19,16 +22,25 @@ export default function Home(){
             {
                 beers ?
                 (
-                <div >
-                    <Navbar />
-                    <Header beers={beers.slice(0,5)}/>
-                    <About/>
+                <div className="home">
+                    <div color="overlay">
+                        <Navbar />
+                        <Header beers={beers.slice(0,5)}/>
+                        {/* <Empty/> */}
+                        <About/>
+                        <Empty/>
+                        {/* <Slider beers={beers.slice(0,5)}/> */}
+                        <Bento/>
+                        <Empty/>
+                        <Footer/>
+                    </div>
+                    
                     {/* {
                         beers.map(item => (<div>
                             <Link to={`/beer/${item.slug}`}>{item.name}</Link>
                             </div>))
                     } */}
-                    {/* <Footer/> */}
+                    
                 </div>
                 )
                 :

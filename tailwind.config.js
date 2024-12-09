@@ -11,7 +11,8 @@ export default {
         coustard : ["Coustard", "sans-serif"],
       },
       backgroundImage:{
-        'light' : "url('/assets/BackBG.png')"
+        'light' : "url('/assets/BackBG.png')",
+        'dark-image-bg' : "url('/assets/Rectangle.png')"
       }
     },
     colors:{
@@ -20,7 +21,8 @@ export default {
       'yellow' : "#fec238",
       'black': '#000',
       'gray': '#dee2e6',
-      'dark-gray': '#adb5bd'
+      'dark-gray': '#adb5bd',
+      'l-beige': "#FCF8EE"
     }
   },
   plugins: [],

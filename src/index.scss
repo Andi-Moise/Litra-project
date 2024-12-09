@@ -26,7 +26,20 @@
   }
   @keyframes l3 {to{transform: rotate(1turn)}}
 
+//   EMPTY
+.empty{
+        @apply w-full h-[100px];
+}
 
+//   HOME
+.home{
+        // @apply flex flex-col gap-4;
+        // @apply bg-opacity-15 bg-[url('./assets/full-bg.png')]  object-fill;
+        // .overlay{
+        //         @apply bg-l-beige
+        // }
+        
+}
 //   CATALOG
 .catalog{
         @apply container mx-auto my-16 grid gap-3;
@@ -107,16 +120,220 @@
                         @apply text-xl font-medium font-onest
                 }
                 h1{
-                        @apply text-yellow font-medium text-6xl w-1/2 font-coustard;
+                        @apply text-dark-blue font-medium text-6xl w-1/2 font-coustard;
                 }
                 p{
-                        @apply w-3/5 text-xl font-onest;
+                        @apply w-3/6 text-xl font-onest;
                 }
                 .button{
-                        @apply bg-yellow py-2 px-6 rounded-3xl w-fit font-coustard;
+                        @apply bg-dark-blue py-2 px-6 rounded-3xl w-fit font-coustard text-white;
                 }
         }
 }
+
+// SLIDER 
+.slider{
+        @apply w-full h-screen flex;
+        .part{
+                @apply w-1/2;
+
+                .container2{
+                        @apply w-full h-full flex items-center flex-col justify-center bg-dark-blue text-white font-coustard;
+                        .title2{
+                                @apply text-6xl font-medium font-coustard;
+                        }
+                        .subtitle{
+                                @apply text-3xl mt-2 font-coustard;
+                        }
+                        .description{
+                                @apply text-center text-base;
+                        }
+                        .info{
+                                @apply flex justify-center;
+                        }
+                        
+                }
+        }
+}
+
+// FOOTER
+.footer{
+        @apply w-full  bg-black;
+        .back{
+                @apply h-[700px] bg-[url('./assets/Footer.jpg')] object-fill ;
+                
+                .over{
+                        @apply w-full bg-black;
+                }
+        }
+        .main{
+                .part1{
+                        @apply container py-[100px]  grid grid-cols-4 gap-4 bg-black;
+                        .box{
+                                @apply w-full p-4 bg-white rounded-lg flex flex-col gap-1 h-fit;
+                                h1{
+                                        @apply text-2xl font-coustard 
+                                }
+                                p{
+                                        @apply font-onest;
+                                }
+                                .subscribe{
+                                        @apply w-full py-2 flex justify-center items-center shadow-md rounded-lg gap-1  bg-yellow text-white;
+                                }
+                        }
+                        .col{
+                                @apply flex text-white flex-col items-center gap-2;
+                                h1{
+                                        @apply text-2xl font-coustard ;
+                                }
+                                div{
+                                        @apply flex flex-col gap-2;
+                                }
+                                
+                        }
+                        .links{
+                                @apply flex gap-3 flex-col;
+                                .more{
+                                        @apply flex gap-3;
+                                        div{
+                                        @apply h-[30px] w-[30px] rounded-3xl flex justify-center items-center bg-white text-black text-2xl; 
+                                }}
+                                img{
+                                        @apply h-[100px]
+                                }
+                        }
+                }
+        }
+        .title{
+                @apply flex items-center justify-center w-full ;
+                
+              
+                h1{
+                        @apply text-9xl font-coustard bg-dark-blue w-full flex justify-center items-center;
+                        color: #fff;
+                        mix-blend-mode: multiply;
+                        
+                        
+                        
+                        
+                      
+                }
+        }
+
+        
+}
+  
+// BENTO
+.bento{
+        @apply my-5;
+        .container{
+                @apply flex justify-center items-center flex-col mx-auto gap-6;
+                .text{
+                        @apply flex flex-col gap-2 items-center uppercase;
+                        .title{
+                                @apply font-coustard text-5xl text-dark-blue font-medium 
+                        }
+                }
+                
+        }
+        
+}
+.grid-bento{
+        display: grid;
+        @apply justify-center items-center w-full h-[800px] mx-auto gap-4 ;
+        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        
+        grid-template-areas: 
+                "part1 part3 part5"
+                "part1 part3 part5"
+                "part1 part3 part5"
+                "part2 part3 part6"
+                "part2 part4 part6"
+                "part2 part4 part6"
+                "part2 part4 part6"
+                "part2 part4 part7";
+       div{
+         @apply bg-black w-full h-full rounded-xl overflow-hidden border-2 ;
+         img{
+                @apply object-cover;
+         }
+       }
+        .part1{
+                grid-area: part1;
+                
+        }
+        .part2{
+                grid-area: part2;
+                
+        }
+        .part3{
+                grid-area: part3;
+        }
+        .part4{
+                grid-area: part4;
+        }
+        .part5{
+                grid-area: part5;
+        }
+        .part6{
+                grid-area: part6;
+        }
+        .part7{
+                @apply flex justify-center items-center bg-dark-blue text-white;
+                grid-area: part7;
+                p{
+                        @apply text-xl font-coustard;
+                }
+        }
+}
+
+  
+  
+      
+//       .info {
+//         display: flex;
+//         justify-content: center;
+//         margin: 20px 0;
+//         font-size: 1rem;
+//       }
+  
+//       .info div {
+//         margin: 0 20px;
+//       }
+  
+//       .description {
+//         font-size: 1rem;
+//         line-height: 1.5;
+//         margin: 20px 0;
+//         max-width: 600px;
+//         margin: 0 auto;
+//       }
+  
+//       .indicators {
+//         display: flex;
+//         justify-content: center;
+//         margin: 30px 0;
+//       }
+  
+//       .indicator {
+//         width: 20px;
+//         height: 20px;
+//         margin: 0 10px;
+//         border-radius: 50%;
+//         background-color: #d3d3d3;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//       }
+  
+//       .indicator.active {
+//         border: 3px solid #f9a825;
+//         background-color: #fff;
+//       }
+
+
 
   @media only screen and (max-width:1800px) {
         .header{

@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/Logo.png'
+import { FiArrowUpRight } from "react-icons/fi";
+import { IoLogoInstagram } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+// import Logo from '../assets/Logo.png'
 
 export default function Footer() {
   return (
-    <div className='w-full py-6 bg-dark-blue'>
-      <footer className="container mx-auto grid grid-cols-4 gap-3">
+    <div className='footer '>
+      {/* <footer className="container mx-auto grid grid-cols-4 gap-3">
         <div className="col">
             <img className='h-[130px]' src={Logo} alt="" />
         </div>
@@ -14,19 +18,19 @@ export default function Footer() {
             <div className="text text-xl flex flex-col gap-2">
                     <Link to={""} className="flex items-center gap-1 text-white">
                         <p className="font-medium">Bere</p>
-                        {/* <FaPlus className="text-sm text-yellow" /> */}
+                        
                     </Link>
                     <Link to={""} className="flex items-center gap-1 text-white">
                         <p className="font-medium">Events</p>
-                        {/* <FaPlus className="text-sm text-yellow" /> */}
+                        
                     </Link>
                     <Link to={""} className="flex items-center gap-1 text-white">
                         <p className="font-medium">Gallery</p>
-                        {/* <FaPlus className="text-sm text-yellow" /> */}
+                        
                     </Link>
                     <Link to={""} className="flex items-center gap-1 text-white">
                         <p className="font-medium">Blog</p>
-                        {/* <FaPlus className="text-sm text-yellow" /> */}
+                        
                     </Link>
             </div>
         </div>
@@ -36,11 +40,11 @@ export default function Footer() {
                 <div className="text text-xl flex flex-col gap-2">
                         <Link to={""} className="flex items-center gap-1 text-white">
                             <p className="font-medium">Strada Varnita 20/1</p>
-                            {/* <FaPlus className="text-sm text-yellow" /> */}
+                            
                         </Link>
                         <Link to={""} className="flex items-center gap-1 text-white">
                             <p className="font-medium">0698 85 555</p>
-                            {/* <FaPlus className="text-sm text-yellow" /> */}
+                            
                         </Link>
                 </div>
             </div>
@@ -49,11 +53,11 @@ export default function Footer() {
                 <div className="text text-xl flex flex-col gap-2">
                         <Link to={""} className="flex items-center gap-1 text-white">
                             <p className="font-medium">L-V: 10:00-16:00</p>
-                            {/* <FaPlus className="text-sm text-yellow" /> */}
+                            
                         </Link>
                         <Link to={""} className="flex items-center gap-1 text-white">
                             <p className="font-medium">Sambata, Duminca: inchis</p>
-                            {/* <FaPlus className="text-sm text-yellow" /> */}
+                            
                         </Link>
                 </div>
             </div>
@@ -63,7 +67,61 @@ export default function Footer() {
         <div className='col'>
 
         </div>
-      </footer>
+      </footer> */}
+      <div className="back">
+        <div className="over">
+            
+       
+        <div className='main container mx-auto'>
+                <div className="part1">
+                    <div className="box">
+                        <h1>Primește Ultimele Noutăți</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <div className='subscribe'>
+                            <p>Subscribe by email</p>
+                            <FiArrowUpRight />
+                        </div>
+                    </div>
+                    <div className='col'>
+                        <h1>Title</h1>
+                        <div className='flex flex-col gap-4'>
+                            <Link to={""}>Bere</Link>
+                            <Link to={""}>Events</Link>
+                            <Link to={""}>Gallery</Link>
+                            <Link to={""}>Blog</Link>
+                        </div>
+                    </div>
+                    <div className='col'>
+                        <h1>Title</h1>
+                        <div className='flex flex-col gap-4'>
+                            <Link to={""}>Bere</Link>
+                            <Link to={""}>Events</Link>
+                            <Link to={""}>Gallery</Link>
+                            <Link to={""}>Blog</Link>
+                        </div>
+                    </div>
+                    <div className="links">
+                        <div className='more'>
+                            <div><IoLogoInstagram /></div>
+                            <div><FaFacebook /></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        
+                            {/* <img src={Logo} alt="" /> */}
+                        
+                    </div>
+                </div>
+        </div>
+
+        
+      </div>
+      <div className="title">
+            <h1>LITRA</h1>
+        </div>
+      </div>
+      
     </div>
   )
 }
