@@ -20,9 +20,10 @@ export default {
       'white' : '#fff',
       'yellow' : "#fec238",
       'black': '#000',
-      'gray': '#dee2e6',
+      'gray': '#e5e1dd',
       'dark-gray': '#adb5bd',
-      'l-beige': "#FCF8EE"
+      'l-beige': "#FCF8EE",
+      'white-dark': "#faf6f1",
     }
   },
   plugins: [],

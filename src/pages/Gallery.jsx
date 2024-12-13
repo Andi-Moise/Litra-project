@@ -4,7 +4,10 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import Loader from '../components/Loader'
 import GalleryElement from '../components/GalleryElement'
-
+import Empty from '../components/Empty'
+import Layer_2 from '../assets/Layer_2.png'
+import Layer_3 from '../assets/Layer_3.png'
+import Thirsty from '../components/Thirsty'
 export default function Gallery() {
     const [gallery, setGallery] = useState(null)
     useEffect(() =>{
@@ -16,9 +19,15 @@ export default function Gallery() {
         {
                 gallery ?
                 (
-                    <div >
+                    <div className='relative overflow-hidden'>
+                        <img src={Layer_2} alt="" className='absolute top-0 -right-[100px] h-[800px] -z-10 over'/>
+                        <img src={Layer_3} alt="" className='absolute top-[750px] -left-[100px] h-[700px] -z-10'/>
                         <Navbar/>
+                        
+                        <Empty/>
                         <GalleryElement/>
+                        {/* <Empty/> */}
+                        <Thirsty/>
                     </div>
                 )
                 :

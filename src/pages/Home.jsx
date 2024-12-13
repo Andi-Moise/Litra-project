@@ -9,6 +9,9 @@ import About from "../components/About"
 import Slider from "../components/Slider"
 import Bento from "../components/Bento"
 import Empty from "../components/Empty"
+import Thirsty from "../components/Thirsty"
+import Header2 from "../components/Header2"
+import Map from '../components/Map'
 
 export default function Home(){
     const [beers, setBeers] = useState(null)
@@ -22,16 +25,23 @@ export default function Home(){
             {
                 beers ?
                 (
-                <div className="home">
+                <div className="home bg-white-dark">
                     <div color="overlay">
-                        <Navbar />
-                        <Header beers={beers.slice(0,5)}/>
+                        <Navbar className="z-10" />
+                        {/* <Header beers={beers.slice(0,5)}/> */}
+                        <Header2 className="z-0"/>
+                        <Empty/>
                         {/* <Empty/> */}
                         <About/>
                         <Empty/>
-                        {/* <Slider beers={beers.slice(0,5)}/> */}
-                        <Bento/>
+                        <Slider beers={beers.slice(0,5)}/>
                         <Empty/>
+                        <Bento/>
+
+                        <Empty/>
+                        <Map/>
+                        <Thirsty/>
+                        {/* <Empty/> */}
                         <Footer/>
                     </div>
                     
