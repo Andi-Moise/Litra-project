@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 import { TbLayoutNavbar } from "react-icons/tb"
 import Navbar from "../components/Navbar"
 import Empty from "../components/Empty"
+import Footer from "../components/Footer"
 
 export default function Details(){
     const [beer, setBeer] = useState(null)
@@ -92,6 +93,7 @@ export default function Details(){
                             <img src="https://e0422ad54df560b3b943be55cff4d267.cdn.bubble.io/f1689346987881x423421005038588000/Beer_process.svg" alt="" />
                         </div>
                     </div>
+                    <Footer/>
                     
                 </div>
             )

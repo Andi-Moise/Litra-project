@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import SliderI from '../assets/Slider.png';
 import FAQ from "../components/FAQ"
+import Footer from "../components/Footer"
 
 export default function Beers({}){
     const [contact, setContact] = useState(null)
@@ -134,6 +135,7 @@ export default function Beers({}){
 
                             </div>
                         </div>
+                        <Footer/>
                     </div>
                 )
                 :

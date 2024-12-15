@@ -117,7 +117,7 @@
                       }
                       
                       .card-button-primary {
-                        @apply bg-dark-blue border-white hover:bg-white hover:text-dark-blue hover:border-2  ;
+                        @apply bg-dark-blue border-dark-blue border-2 hover:bg-white hover:text-dark-blue hover:border-2  ;
                       }
                       
                       .card-button-secondary {
@@ -248,6 +248,44 @@
 // FOOTER
 footer{
         @apply bg-dark-blue;
+
+        .test{
+                @apply container mx-auto flex flex-col;
+                .top{
+                        @apply text-white flex flex-col justify-center items-center gap-6;
+                        h1{
+                                @apply uppercase text-xl font-onest font-bold 
+                        }
+                        .links{
+                                @apply flex items-center gap-5 ; 
+                                div{
+                                        @apply h-[50px] w-[50px] border flex justify-center items-center rounded-full text-2xl;
+
+                                }
+                        }
+                }
+                .middle{
+                        @apply grid grid-cols-4 text-white w-2/3 mx-auto ;
+                        .box{
+                                @apply flex flex-col justify-self-center gap-2;
+                                h1{
+                                        @apply text-xl font-onest font-bold;
+                                }
+                                .service{
+                                        @apply flex flex-col items-start gap-1 opacity-85;
+                                }
+                        }
+                }
+                .end{
+                        @apply flex flex-col justify-center items-center text-white opacity-85 gap-2;
+                        .upper{
+                                @apply flex gap-3 
+                        }
+                }
+                .photos{
+                        @apply flex justify-center items-center gap-6;
+                }
+        }
         .content{
                 @apply py-5 text-white container mx-auto ;
                 display: flex;

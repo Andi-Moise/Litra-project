@@ -38,7 +38,7 @@ export default function BeerSm({item}) {
           </div>
           <div className='grid grid-cols-2 gap-2'>
           <Link to={`/beer/${item.slug}`}>
-            <button className="card-button card-button-primary w-1/2">View More</button>
+            <button className="card-button card-button-primary w-1/2 ">View More</button>
             </Link>
             <div>
             {/* {

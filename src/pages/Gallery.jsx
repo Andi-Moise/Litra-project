@@ -8,6 +8,7 @@ import Empty from '../components/Empty'
 import Layer_2 from '../assets/Layer_2.png'
 import Layer_3 from '../assets/Layer_3.png'
 import Thirsty from '../components/Thirsty'
+import Footer from '../components/Footer'
 export default function Gallery() {
     const [gallery, setGallery] = useState(null)
     useEffect(() =>{
@@ -28,6 +29,7 @@ export default function Gallery() {
                         <GalleryElement/>
                         {/* <Empty/> */}
                         <Thirsty/>
+                        <Footer/>
                     </div>
                 )
                 :
