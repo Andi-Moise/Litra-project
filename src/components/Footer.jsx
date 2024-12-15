@@ -1,127 +1,52 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// Footer.js
+import React from 'react';
+// import './Footer.css';
 import Logo from '../assets/Logo.png'
-import { FiArrowUpRight } from "react-icons/fi";
-import { IoLogoInstagram } from "react-icons/io5";
-import { FaFacebook } from "react-icons/fa";
-// import Logo from '../assets/Logo.png'
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <div className='footer '>
-      {/* <footer className="container mx-auto grid grid-cols-4 gap-3">
-        <div className="col">
-            <img className='h-[130px]' src={Logo} alt="" />
-        </div>
-        <div className='col flex flex-col gap-4'>
-            <h1 className='text-gray font-medium text-3xl'>Servicii</h1>
-            <div className="text text-xl flex flex-col gap-2">
-                    <Link to={""} className="flex items-center gap-1 text-white">
-                        <p className="font-medium">Bere</p>
-                        
-                    </Link>
-                    <Link to={""} className="flex items-center gap-1 text-white">
-                        <p className="font-medium">Events</p>
-                        
-                    </Link>
-                    <Link to={""} className="flex items-center gap-1 text-white">
-                        <p className="font-medium">Gallery</p>
-                        
-                    </Link>
-                    <Link to={""} className="flex items-center gap-1 text-white">
-                        <p className="font-medium">Blog</p>
-                        
-                    </Link>
+    <footer>
+      <div className="content">
+        <div className="left part">
+          
+          <div className="lower">
+            <div className="title">Contacts</div>
+            <div className='flex flex-col '>
+            <div className="phone">
+              <a href="#"><i className="fas fa-phone-volume"></i>+373 678 902 345</a>
             </div>
-        </div>
-        <div className='col flex flex-col gap-5'>
-            <div className='flex flex-col gap-4'>
-                <h1 className='text-gray font-medium text-3xl'>Locatie</h1>
-                <div className="text text-xl flex flex-col gap-2">
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <p className="font-medium">Strada Varnita 20/1</p>
-                            
-                        </Link>
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <p className="font-medium">0698 85 555</p>
-                            
-                        </Link>
-                </div>
+            <div className="email">
+              <a href="#"><i className="fas fa-envelope"></i>litra.md@gmail.com</a>
             </div>
-            <div className='flex flex-col gap-4'>
-                <h1 className='text-gray font-medium text-3xl'>Program</h1>
-                <div className="text text-xl flex flex-col gap-2">
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <p className="font-medium">L-V: 10:00-16:00</p>
-                            
-                        </Link>
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <p className="font-medium">Sambata, Duminca: inchis</p>
-                            
-                        </Link>
-                </div>
             </div>
             
-            
+          </div>
         </div>
-        <div className='col'>
-
+        <div className="middle part">
+          <div className="title">Servicii</div>
+          <div><a href="#">Bere</a></div>
+          <div><a href="#">Excursii</a></div>
+          <div><a href="#">Gallery</a></div>
+          
+          <div><a href="#">Contact</a></div>
         </div>
-      </footer> */}
-      <div className="back">
-        <div className="over">
-            
-       
-        <div className='main container mx-auto'>
-                <div className="part1">
-                    <div className="box">
-                        <h1>Primește Ultimele Noutăți</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <div className='subscribe'>
-                            <p>Subscribe by email</p>
-                            <FiArrowUpRight />
-                        </div>
-                    </div>
-                    <div className='col'>
-                        <h1>Title</h1>
-                        <div className='flex flex-col gap-4'>
-                            <Link to={""}>Bere</Link>
-                            <Link to={""}>Events</Link>
-                            <Link to={""}>Gallery</Link>
-                            <Link to={""}>Blog</Link>
-                        </div>
-                    </div>
-                    <div className='col'>
-                        <h1>Title</h1>
-                        <div className='flex flex-col gap-4'>
-                            <Link to={""}>Bere</Link>
-                            <Link to={""}>Events</Link>
-                            <Link to={""}>Gallery</Link>
-                            <Link to={""}>Blog</Link>
-                        </div>
-                    </div>
-                    <div className="links">
-                        <div className='more'>
-                            <div><IoLogoInstagram /></div>
-                            <div><FaFacebook /></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        
-                            {/* <img src={Logo} alt="" /> */}
-                        
-                    </div>
-                </div>
-        </div>
-
-        
-      </div>
-      <div className="title">
-            <h1>LITRA</h1>
+        <div className="right part">
+          <div className="title">Follow us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter your email "/>
+            <input type="submit" value="Send"/>
+            {/* <div className="media-icons">
+              <a href="#"><i className="fab fa-facebook-f"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-youtube"></i></a>
+            </div> */}
+          </form>
         </div>
       </div>
-      
-    </div>
-  )
-}
+    </footer>
+  );
+};
+
+export default Footer;

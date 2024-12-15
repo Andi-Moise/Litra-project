@@ -29,15 +29,15 @@ export default function Details(){
         {
             beer ?
             (
-                <div className="bg-white-dark h-full">
+                <div className="bg-white-dark h-full w-full">
                     <div>
                         <Navbar />
                         <Empty/>
                     </div>
-                    <div className="details">
-                        <div className="container">
+                    <div className="details bg-white-dark ">
+                        <div className="type1 container ">
                             <p className="under">{beer.name}</p>
-                            <div className="part flex justify-center items-center">
+                            <div className="part flex  items-center">
 
                                 <img src={beer.catalogimg} alt="" />
                             </div>
@@ -51,7 +51,45 @@ export default function Details(){
                                     <div className="box">24 x 330 ml - {beer.price * 24} MDL</div>
                                 </div>
                                 <p className="description">{beer.description}</p>
+                                <div>
+                                    
+                                </div>
                             </div>
+                        </div>
+                        <div className="info">
+                            <h1>Note de degustare</h1>
+                            <div className="bento">
+                                <div className="box">
+                                <h2>sweetness</h2>
+                                <p>{beer.sweetness}</p>
+                                </div>
+                                <div className="box">
+                                    <h2>aroma</h2>
+                                    <p>{beer.aroma}</p>
+                                </div>
+                                <div className="box">
+                                <h2>taste</h2>
+                                <p>{beer.taste}</p>
+                                </div>
+                                <div className="box">
+                                <h2>bitterness</h2>
+                                <p>{beer.bitterness}</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {/* <div className="gap h-[100px]"> </div> */}
+                        {/* <div className="type2">
+                            <div className="box"><p>Alex</p></div>
+                            <div className="box"><p>Alex</p></div>
+                            <div className="box"><p>Alex</p></div>
+                            <div className="box"><p>Alex</p></div>
+                        </div> */}
+                        <div className="fabricare">
+                            <h1>CUM FABRICAM</h1>
+                            <h1>NOI BERILE NOASTRE ?</h1>
+                            
+                            <img src="https://e0422ad54df560b3b943be55cff4d267.cdn.bubble.io/f1689346987881x423421005038588000/Beer_process.svg" alt="" />
                         </div>
                     </div>
                     

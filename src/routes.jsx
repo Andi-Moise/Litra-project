@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Details from "./pages/Details"
 import Beers from "./pages/Beers"
 import Gallery from "./pages/Gallery"
+import Contact from "./pages/Contact"
 
 
 
@@ -26,6 +27,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/gallery",
                 element: <Gallery/>
+            },
+            {
+                path: "/contact",
+                element: <Contact/>
             }
         ]
     }

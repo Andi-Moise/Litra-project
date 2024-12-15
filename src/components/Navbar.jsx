@@ -5,9 +5,25 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
-export default function Navbar(){
+import Cart from "./Cart";
+import { useState, useEffect } from "react"
+import axios from "axios"
+import Loader from "../components/Loader"
+
+export default function Navbar({beers}){
+    const [aux, setAux] = useState(null)
+    useEffect(() =>{
+        axios.get("https://67152b2b33bc2bfe40b99db8.mockapi.io/api/city-traveler/cars")
+            .then(res => setAux(res.data))
+    }, [])
     return(
-        <div className="w-full h-[80px] bg-dark-blue flex justify-center items-center">
+        <div>
+            {
+                aux ?
+                (
+                    
+                    <div className="w-full h-[80px] bg-dark-blue flex justify-center items-center">
+                        
             <div className="navbar container mx-auto flex justify-between relative">
                 <div className="left flex gap-4">
                     <Link to="/beers" className="flex items-center gap-1 text-white">
@@ -22,23 +38,21 @@ export default function Navbar(){
                         <p className="font-medium">GALLERY</p>
                         <FaPlus className="text-sm text-yellow" />
                     </Link>
-                    <Link to={""} className="flex items-center gap-1 text-white">
+                    {/* <Link to={""} className="flex items-center gap-1 text-white">
                         <p className="font-medium">BLOG</p>
                         <FaPlus className="text-sm text-yellow" />
-                    </Link>
+                    </Link> */}
                 </div>
                 
-                <div className="right left flex gap-4">
-                <Link to={""} className="flex items-center gap-1 text-white">
+                <div className="right left flex gap-4 ">
+                        <Link to={"/contact"} className="flex items-center gap-1 text-white">
                             <p className="font-medium">CONTACTE</p>
                             <IoMdArrowRoundForward className="text-sm text-yellow" />
                         </Link>
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <FaShoppingCart  className="text-base text-white" />
+                        <Link to={""} className="flex items-center  z-50" >
+                            <Cart aux={aux}/>
                         </Link>
-                        <Link to={""} className="flex items-center gap-1 text-white">
-                            <FaLocationDot className="text-base text-white" />
-                        </Link>
+                        
                         
                         <Link to={""} className="flex items-center gap-1 text-white">
                             <p className="font-medium">RO</p>
@@ -49,5 +63,11 @@ export default function Navbar(){
                 
             </div>
         </div>
+                )
+                :
+                Loader
+            }
+        </div>
+        
     )
 }

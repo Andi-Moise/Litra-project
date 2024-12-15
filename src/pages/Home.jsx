@@ -12,6 +12,8 @@ import Empty from "../components/Empty"
 import Thirsty from "../components/Thirsty"
 import Header2 from "../components/Header2"
 import Map from '../components/Map'
+import Cart from "../components/Cart"
+import History from "../components/History"
 
 export default function Home(){
     const [beers, setBeers] = useState(null)
@@ -26,23 +28,26 @@ export default function Home(){
                 beers ?
                 (
                 <div className="home bg-white-dark">
-                    <div color="overlay">
-                        <Navbar className="z-10" />
+                    <div color="overlay relative">
+                        <Navbar className="z-50" beers={beers} />
                         {/* <Header beers={beers.slice(0,5)}/> */}
                         <Header2 className="z-0"/>
                         <Empty/>
-                        {/* <Empty/> */}
+                        
                         <About/>
-                        <Empty/>
+                        
                         <Slider beers={beers.slice(0,5)}/>
                         <Empty/>
                         <Bento/>
 
                         <Empty/>
+                        <History/>
+                        <Empty/>
                         <Map/>
                         <Thirsty/>
-                        {/* <Empty/> */}
+                        
                         <Footer/>
+                       
                     </div>
                     
                     {/* {

@@ -4,7 +4,9 @@ import Loader from "../components/Loader"
 
 import { useState, useEffect } from "react";
 import BeerSm from "./BeerSm";
-
+// import { CartProvider } from './CartContext';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import Cart from './Cart';
 
 
 export default function Catalog({catalog}){
@@ -16,6 +18,7 @@ export default function Catalog({catalog}){
     
     let priceGap =1000
 
+    
     priceInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let minVal = parseInt(rangeInput[0].value)
@@ -101,7 +104,7 @@ export default function Catalog({catalog}){
              {
                 catalog ?
                 (
-                    <div >
+                    <div className="">
                         <div className="catalog">
                             <div className="side">
                                 <h1 className="">Filters</h1>
@@ -143,15 +146,15 @@ export default function Catalog({catalog}){
                                         </div>
                                         
 
-                                        <div className="slider">
+                                        {/* <div className="slider">
                                             <div className="progress">
 
                                             </div>
-                                        </div>
-                                        <div className="range-input">
+                                        </div> */}
+                                        {/* <div className="range-input">
                                             <input type="range" className="range-min" min="0" max="100" value="5" step="1"/>
                                             <input type="range" className="range-max" min="0" max="100" value="100" step="1" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <button>Reset</button>
@@ -162,7 +165,10 @@ export default function Catalog({catalog}){
                                         catalogBeers.map(item => <BeerSm item={item} />)
                                     
                                 }
+                                
                             </div>
+                            
+                            
                         </div>
                     </div>
                 )
