@@ -16,7 +16,7 @@ export default function Slider({beers}) {
 
   return (
     <div className='slider relative overflow-hidden'>
-      <img src={SliderI} alt="" className='absolute h-full w-full -left-[800px] z-10'/>
+      <img src={SliderI} alt="" className='img1 absolute h-full w-full -left-[800px] z-10'/>
       
       
       <div className="part relative z-10">
@@ -63,7 +63,7 @@ export default function Slider({beers}) {
             }
             
             {/* <div className="black-square absolute w-full h-full opacity-35 bg-black"></div> */}
-            <div className=" image h-[800px] absolute left-2/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <div className=" image2 h-[800px] absolute left-2/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
                 <img className=" h-full object-cover" src={beerImages[imageIndex]} alt="" />
             </div>
             

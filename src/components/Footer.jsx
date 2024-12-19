@@ -14,7 +14,7 @@ const Footer = () => {
       <div className='h-[50px]'></div>
       <div className="test">
         <div className="top">
-          <h1>Connect with Litra</h1>
+          <h1 className='font-coustard'>Connect with Litra</h1>
           <div className="links">
             <div>
               <FaInstagram />
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className='h-[70px]'></div>
         <div className="middle">
           <div className='box'>
-            <h1>BEERS</h1>
+            <h1>Beers</h1>
             <div className="service">
               <p>Blonde</p>
               <p>Brune</p>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='box'>
-            <h1>SPIRITS</h1>
+            <h1>Spirits</h1>
             <div className="service">
               <p>Litra Ipa</p>
               <p>Craft Beer</p>
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='box'>
-            <h1>ADDRESS</h1>
+            <h1>Address</h1>
             <div className="service">
               
               <p>Mihai Eminescu</p>
@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="end">
           <div className="upper">
             <p>Privacy</p>
-            <p>Site Map</p>
+            <p>Policy</p>
             <p>Do not sell my information</p>
           </div>
           <p>© 2024 Moisenco Andrei</p>

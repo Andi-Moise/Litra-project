@@ -31,8 +31,8 @@ export default function Home(){
                     <div color="overlay relative">
                         <Navbar className="z-50" beers={beers} />
                         {/* <Header beers={beers.slice(0,5)}/> */}
-                        <Header2 className="z-0"/>
-                        <Empty/>
+                        <Header2 className=""/>
+                        
                         
                         <About/>
                         

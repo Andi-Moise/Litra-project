@@ -75,7 +75,7 @@ export default function Beers({}){
                                         <div class="grid md:grid-cols-2 md:gap-6">
                                             <div class="relative z-0 w-full mb-5 group">
                                                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" className="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-black peer z-0" placeholder=" " required />
-                                                <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Phone number (123-456-7890)</label>
+                                                <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Phone number</label>
                                             </div>
                                             <div class="relative z-0 w-full mb-5 group">
                                                 <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-black peer z-0" placeholder=" " required />
@@ -97,7 +97,7 @@ export default function Beers({}){
                         <div className="gap h-[50px]"></div>
                         <div className="locate h-screen">
                             <img src={SliderI} alt="" className='absolute h-full w-full   top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0'/>
-                            <div className="grid container grid-cols-2 h-fit mx-auto  rounded-lg gap-5 mx-auto">
+                            <div className="mem grid container grid-cols-2 h-fit mx-auto  rounded-lg gap-5 mx-auto">
                             <div className="part1 z-10">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.512189325876!2d28.898644899999997!3d46.990915199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97bdf9b813a13%3A0x9106dd42cb63aaba!2sLitra%20Brewing%20Company!5e0!3m2!1sen!2s!4v1734212272684!5m2!1sen!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade z-10"></iframe>
                             </div>

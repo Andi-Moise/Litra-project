@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import Catalog from "../components/Catalog"
 import Footer from "../components/Footer"
+import { CartProvider } from "react-use-cart";
 
 export default function Beers({}){
     const [catalog, setCatalog] = useState(null)
@@ -50,9 +51,11 @@ function addToCart(){
                 catalog ?
                 (
                     <div >
+                        <CartProvider>
                         <Navbar/>
                         <Catalog catalog={catalog}/>
                         <Footer/>
+                        </CartProvider>
                     </div>
                 )
                 :

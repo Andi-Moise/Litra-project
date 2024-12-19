@@ -1,8 +1,10 @@
+const {nextui} = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/(calendar|select|button|ripple|spinner|form|listbox|divider|popover|scroll-shadow).js"
   ],
   theme: {
     extend: {
@@ -26,5 +28,5 @@ export default {
       'white-dark': "#faf6f1",
     }
   },
-  plugins: [],
+  plugins: [nextui()],
 }

@@ -5,8 +5,8 @@ import Layer_3 from '../assets/Layer_3.png'
 export default function Bento() {
   return (
     <div className='bento h-screen w-full relative overflow-hidden  my-4'>
-       <img src={Layer_2} alt="" className='absolute top-0 -right-[100px] h-[800px] z-0'/>
-       <img src={Layer_3} alt="" className='absolute bottom-0 -left-[100px] h-[700px] z-10'/>
+       <img src={Layer_2} alt="" className='img1 absolute top-0 -right-[100px] h-[800px] z-0'/>
+       <img src={Layer_3} alt="" className='img2 absolute bottom-0 -left-[100px] h-[700px] z-10'/>
         <div className="container h-full  ">
             <div className='text pt-3'>
                 <p className="title">Our</p>

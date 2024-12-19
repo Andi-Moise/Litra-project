@@ -48,34 +48,7 @@
 
                 @apply grid grid-cols-4 gap-5;
 
-                // .box{
-                //         @apply flex justify-center relative flex-col gap-3;
-                       
-                //         .icon{
-                //                 @apply absolute top-3 right-3 text-xl flex justify-center items-center text-white bg-yellow p-2 rounded-3xl;
-                                
-                //         }
-                //         .text{
-                //                 @apply flex justify-between;
-                //                 .title{
-                //                         @apply text-xl font-semibold
-                //                 }
-                //                 .aroma{
-                //                         @apply text-dark-gray text-sm
-                //                 }
-                //         }
-                //         .addCart{
-                //                 @apply flex justify-center bg-dark-blue text-white items-center  w-fit p-2 h-fit rounded-lg;
-                                
-                //         }
-                // }
-
-                // .images{
-                //         @apply h-[300px] bg-gray p-5 rounded-xl flex justify-center items-center shadow-md;
-                //         img{
-                //                 @apply object-cover h-full;
-                //         }
-                // }
+                
                 .card-container {
                         @apply border-2 rounded-lg shadow-md p-4 bg-white text-center flex flex-col gap-3;
                       }
@@ -127,13 +100,13 @@
 
 
         .side{
-                .slider{
-                        @apply h-2 rounded-sm bg-dark-gray relative;
-                        .progress{
-                                @apply h-2 rounded-sm bg-yellow absolute left-1/4 right-1/4;
-                        }
+                // .slider{
+                //         @apply h-2 rounded-sm bg-dark-gray relative;
+                //         .progress{
+                //                 @apply h-2 rounded-sm bg-yellow absolute left-1/4 right-1/4;
+                //         }
                         
-                }
+                // }
                 .range-input{
                         @apply relative;
                         input{
@@ -161,6 +134,33 @@
         }
         
 }
+
+// NAVBAR
+.navbar{
+        .menu-btn{
+                @apply hidden cursor-pointer ;
+            }
+}
+.menu{
+        @apply bg-white hidden p-4 fixed top-0 right-[-300px] h-screen w-[300px]  flex-col gap-2 border-l duration-200 ;
+        
+        div{
+            @apply flex flex-row-reverse items-center;
+    
+            .menu-icon{
+                @apply text-5xl cursor-pointer
+            }
+        }
+    
+        nav ul{
+            @apply flex flex-col gap-4;
+            
+            a{
+                @apply font-medium text-black hover:text-dark-blue duration-200;
+            }}
+    
+    
+    }
 
 // ABOUT
 .about{
@@ -193,6 +193,57 @@
         // background: 
         .button{
                 @apply bg-white py-2 px-6 rounded-3xl w-fit font-onest font-bold uppercase text-2xl text-dark-blue;
+        }
+}
+
+// VISITS
+.visits{
+        .info{
+                @apply h-screen container grid grid-cols-2 mx-auto;
+                .part{
+                       @apply flex flex-col justify-center;
+                       h1{
+                        @apply text-6xl w-3/4 text-dark-blue font-coustard;
+                       } 
+                       p{
+                        @apply text-dark-blue text-xl ;
+                       }
+                       .picture{
+                        @apply h-[200px] w-[200px] rounded-full overflow-hidden bg-dark-blue border-2;
+                        img{
+                                @apply object-cover h-full w-full;
+                        }
+                       }
+                       h2{
+                        @apply text-2xl font-coustard;
+                       }
+                       small{
+                        @apply text-xl font-semibold;
+                       }
+                       
+                }
+        }
+        .booking{
+                @apply h-[1200px] bg-dark-blue text-white;
+                .all{
+                        @apply container mx-auto
+                        ;
+                        .part{
+                                .title{
+                                        h1{
+                                        @apply text-8xl font-onest font-bold;
+                                }}
+                                p{
+                                        @apply text-white;
+                                        span{
+                                                @apply underline;
+                                        }
+                                }
+                                h2{
+                                        @apply text-4xl font-coustard
+                                }
+                        }
+                }
         }
 }
 
@@ -231,7 +282,7 @@
                         .indicators{
                                 @apply flex gap-6;
                                 .indicator{
-                                        @apply h-[60px] w-[60px]
+                                        @apply h-[60px] w-[60px];
                                 }
                                 .active{
                                         @apply border-4 border-yellow rounded-[100px] p-1 h-[75px] w-[75px]
@@ -254,7 +305,7 @@ footer{
                 .top{
                         @apply text-white flex flex-col justify-center items-center gap-6;
                         h1{
-                                @apply uppercase text-xl font-onest font-bold 
+                                @apply uppercase text-xl font-coustard 
                         }
                         .links{
                                 @apply flex items-center gap-5 ; 
@@ -269,7 +320,7 @@ footer{
                         .box{
                                 @apply flex flex-col justify-self-center gap-2;
                                 h1{
-                                        @apply text-xl font-onest font-bold;
+                                        @apply text-xl font-coustard ;
                                 }
                                 .service{
                                         @apply flex flex-col items-start gap-1 opacity-85;
@@ -431,10 +482,10 @@ footer{
                                 @apply text-3xl font-coustard;
                         }
                         .s{
-                                @apply text-black opacity-50 text-sm
+                                @apply text-dark-blue opacity-50 text-sm
                         }
                         .customer{
-                                @apply text-black font-semibold underline text-sm
+                                @apply text-dark-blue font-semibold underline text-sm
                         }
                         .big{
                                 @apply grid w-full grid-cols-3 opacity-90 ;
@@ -442,14 +493,14 @@ footer{
                                         @apply font-coustard
                                 }
                                 p{
-                                        @apply text-black opacity-50 text-sm   
+                                        @apply text-dark-blue opacity-50 text-sm   
                                 }
                         }
                 }
                 .type2{
                         @apply w-1/2 px-4 ;
                         .box{
-                                @apply rounded-lg   w-full p-7 flex flex-col gap-3 bg-white h-fit;
+                                @apply rounded-lg   w-full p-7 flex flex-col gap-3 bg-white h-fit text-dark-blue;
                                 h1{
                                         @apply text-3xl font-coustard;
                                 }
@@ -828,17 +879,923 @@ footer{
 
 
 
-  @media only screen and (max-width:1800px) {
-        .header{
-                .left{
-                        .text{
-                                h1{
-                                        @apply text-7xl
-                                }
-                        }
+  @media only screen and (max-width:1800px ) {
+        .header2{
+                .info{
+                        @apply flex justify-center items-center
                 }
-                .image{
-                        @apply max-h-[650px];
+                h1{
+                        @apply text-8xl
+                }
+        }
+        .about{
+                
+                .container{
+                        @apply flex flex-col ;
+
+                }
+                img{
+                       @apply bottom-[70px]; 
+                       height: 800px;
+                }
+        }
+        .thirsty{
+                h1{
+                        @apply text-[90px];
+                }
+        }
+        
+        .slider{
+                .indicators{
+                        .indicator{
+                                @apply h-[10px] w-[50px]
+                        }
                 }
         }
   }
+
+  @media only screen and (max-width:1550px) {
+        .container{
+                max-width: 1320px;
+        }
+        .header2{
+                .info{
+                        @apply flex justify-center items-center gap-[40px] 
+                }
+                h1{
+                        @apply text-7xl
+                }
+                .button{
+                        @apply bg-white py-2 px-6 rounded-3xl w-fit font-onest font-bold uppercase text-xl text-dark-blue;
+                }
+        }
+        .about{
+                
+                .container{
+                        @apply flex flex-col ;
+
+                }
+                img{
+                       @apply bottom-[50px] ; 
+                       height: 700px;
+                }
+        }
+        .slider{
+                .img1{
+                        @apply -left-[600px]
+                }
+                .image2{
+                        @apply h-[600px]
+                }
+                .indicators{
+                        .indicator{
+                                @apply h-[50px] w-[50px]
+                        }
+                        .active{
+                                @apply h-[65px] w-[65px]
+                        }
+                }
+                
+        }
+        .bento{
+                .container{
+                        .text{
+                                @apply pt-1;
+                                .title{
+                                        @apply text-5xl;
+                                }
+                        }
+                }
+                .grid-bento{
+                        height: 80%;
+                }
+        }
+        .thirsty{
+
+                .heading{
+                        @apply text-[10px];
+                }
+                img{
+                        @apply h-[500px];
+                }
+        }
+        .bento{
+                .img1{
+                        @apply h-[700px]
+                }
+                .img2{
+                        @apply h-[600px]
+                }
+
+        }
+        .empty{
+                
+        }
+        
+  }     
+  @media only screen and (max-width:1400px) {
+        .container{
+                max-width: 1120px;
+        }
+        .about{
+                .container{
+                        @apply gap-5;
+                        small{
+                                @apply text-base;
+                        }
+                        h1{
+                                @apply text-6xl;
+                        }
+                        p{
+                                @apply text-xl;
+                        }
+                        .button{
+                                @apply text-base;
+                        }
+                }
+                img{
+                        @apply bottom-[60px] ; 
+                        height: 600px;
+                 }
+        }
+        .slider{
+                .img1{
+                        @apply -left-[550px]
+                }
+                .part{
+                        .container2{
+                                .title2{
+                                        @apply text-7xl;
+                                }
+                                .subtitle{
+                                        @apply text-6xl;
+                                }
+                                .info{
+                                        .box{
+                                                @apply w-[150px];
+                                               
+                                        }
+                                }
+                                .indicators{
+                                        @apply gap-4;
+                                        .indicator{
+                                                @apply h-[50px] w-[50px];
+                                        }
+                                        .active{
+                                                @apply h-[65px] w-[65px]
+                                        }
+                                }
+                        }
+                }
+        }
+        .bento{
+                .img1{
+                        @apply h-[600px]
+                }
+                .img2{
+                        @apply h-[500px]
+                }
+
+        }
+        .grid-bento{
+                .part7{
+                         p{
+                                @apply text-base
+                         }
+                }
+        }
+        .navfull{
+                @apply h-[70px]
+        }
+        .history{
+                .aux{
+                        .part{
+                                h1{
+                                        @apply text-4xl;
+                                }
+                                p{
+                                        @apply text-base;
+                                }
+                        }
+                }
+                .img1{
+                        @apply -right-[500px]
+                }
+        }
+        .thirsty{
+                .text{
+                        .heading{
+                                h1{
+                                        @apply text-[70px];
+                                }
+                                
+                        }
+                        .button{
+                                @apply text-base;
+                        }
+                }
+                
+                img{
+                        @apply h-[400px];
+                }
+        }
+        .map{
+                
+                .title{
+                        
+                        h1{
+                                @apply font-coustard text-5xl;
+                               
+                        }
+                        
+                }
+               
+        }
+        .page{
+                .img1{
+                        @apply h-[600px] top-[80px]
+                }
+                .img2{
+                        @apply h-[600px]
+                }
+        }
+        .gallery{
+                .elements{
+                        .different{
+                                h1{
+                                        @apply text-2xl;
+                                }
+                        }
+                }
+        }
+        .visits{
+                .info{
+                        .part{
+                                h1{
+                                        @apply text-5xl
+                                }
+                                .hide{
+                                        display: none;
+                                }
+                        }
+                        
+                }
+        }
+  }
+
+  @media only screen and (max-width:1160px) {
+        .container{
+                max-width: 950px;
+        }
+        .catalog{
+                .main{
+                        @apply grid-cols-3
+                }
+        }
+        .header2{
+                .info{
+                        @apply flex justify-center items-center gap-[30px] 
+                }
+                h1{
+                        @apply text-6xl
+                }
+                .button{
+                        @apply bg-white py-2 px-6 rounded-3xl w-fit font-onest font-bold uppercase text-base text-dark-blue;
+                }
+        }
+        .slider{
+                .img1{
+                        @apply -left-[480px]
+                }
+                .image2{
+                        @apply h-[500px]
+                }
+        }
+        .about{
+                .container{
+                        @apply gap-5;
+                        small{
+                                @apply text-base;
+                        }
+                        h1{
+                                @apply text-5xl;
+                        }
+                        p{
+                                @apply text-base;
+                        }
+                        .button{
+                                @apply text-sm;
+                        }
+                }
+                img{
+                        @apply bottom-[15px] ; 
+                        height: 500px;
+                 }
+        }
+        .bento{
+                .img1{
+                        @apply h-[500px]
+                }
+                .img2{
+                        @apply h-[400px]
+                }
+
+        }
+        .grid-bento{
+                .part7{
+                         p{
+                                @apply text-base
+                         }
+                }
+        }
+        .history{
+                .aux{
+                        .part{
+                                h1{
+                                        @apply text-4xl;
+                                }
+                                p{
+                                        @apply text-base;
+                                }
+                        }
+                }
+                .img1{
+                        @apply -right-[400px]
+                }
+        }
+        .thirsty{
+                .text{
+                        .heading{
+                                h1{
+                                        @apply text-[70px];
+                                }
+                                
+                        }
+                        .button{
+                                @apply text-base;
+                        }
+                }
+                
+                img{
+                        @apply h-[400px];
+                }
+        }
+        .map{
+                
+                .title{
+                        
+                        h1{
+                                @apply font-coustard text-5xl;
+                               
+                        }
+                        
+                }
+               
+        }
+        .contact{
+                .locate{
+                        @apply bg-dark-blue
+                }
+        }
+  }
+  @media only screen and (max-width:980px) {
+        .logo{
+                @apply w-[115px] 
+        }
+        .catalog{
+                .main{
+                        @apply grid-cols-2;
+                        .card-container {
+                                @apply border-2 rounded-lg shadow-md p-4 bg-white text-center flex flex-col gap-3;
+                              }
+                              .card-title{
+                                @apply text-xl font-semibold;
+                              }
+                              .card-price{
+                                @apply text-sm font-semibold text-black;
+                              }
+                              .card-image {
+                                @apply mx-auto h-[150px];
+                                img{
+                                        @apply object-cover h-full
+                                }
+                              }
+                              
+                              .info{
+                                @apply flex justify-center px-3;
+                                .box{
+                                        @apply p-1 w-full border border-r-0 flex justify-center items-center flex-col;
+                                        p{
+                                                @apply text-xs;
+                                        }
+                                        small{
+                                                @apply text-sm;
+                                        }
+                                }
+                                .type2{
+                                        @apply border-l-0;
+                                }
+                        }
+                              
+                              .card-stats {
+                                @apply flex justify-between text-sm text-dark-blue  my-4;
+                              }
+                              
+                              .card-button {
+                                @apply text-xs ;
+                              }
+                              
+                              .card-button-primary {
+                                @apply bg-dark-blue border-dark-blue border-2 hover:bg-white hover:text-dark-blue hover:border-2  ;
+                              }
+                              
+                              .card-button-secondary {
+                                @apply bg-white text-dark-blue border-2 border-dark-blue hover:bg-dark-blue hover:text-white ;
+                              }
+                }
+        }
+        .container{
+                max-width: 780px;
+        }
+        .header2{
+                .info{
+                        @apply flex justify-center items-center 
+                }
+                h1{
+                        @apply text-6xl
+                }
+        }
+        .bento{
+                .img1{
+                        display: none;
+                }
+                .img2{
+                        display: none;
+                }
+
+        }
+        .slider{
+                .img1{
+                        @apply -left-[300px]
+                }
+                .image2{
+                        @apply h-[400px]
+                }
+                .part{
+                        .container2{
+                                .title2{
+                                        @apply text-6xl;
+                                }
+                                .subtitle{
+                                        @apply text-5xl;
+                                }
+                                .info{
+                                        .box{
+                                                @apply w-[100px];
+                                                p{
+                                                        @apply text-xs;
+                                                }
+                                                small{
+                                                        @apply text-base;
+                                                }
+                                        }
+                                }
+                                .indicators{
+                                        @apply gap-4;
+                                        .indicator{
+                                                @apply h-[37px] w-[37px];
+                                        }
+                                        .active{
+                                                @apply h-[52px] w-[52px]
+                                        }
+                                }
+                        }
+                }
+        }
+        .grid-bento{
+                // @apply justify-center items-center w-full  mx-auto gap-3 ;
+                @apply gap-1;
+                grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        
+        grid-template-areas: 
+                "part1 part5"
+                "part1 part5"
+                "part2 part2"
+                "part2 part2"
+                "part3 part4"
+                "part3 part4"
+                "part6 part4"
+                "part6 part7";
+                .part7{
+                        p{
+                               @apply text-base
+                        }
+               }
+        }
+        .bento{
+                .container{
+                        .text{
+                                @apply flex-row gap-4;
+                                .title{
+                                        @apply text-4xl;
+                                }
+                        }
+                }
+                .grid-bento{
+                        height: 80%;
+                }
+        }
+        .history{
+                .aux{
+                        grid-template-columns:  1fr 1fr;
+                        .part{
+                                @apply w-full;
+                                h1{
+                                        @apply text-4xl w-full text-center;
+                                }
+                                p{
+                                        @apply text-base;
+                                }
+                                .hide{
+                                        display: none;
+                                }
+                        }
+                }
+                .img1{
+                        @apply -right-[200px]
+                }
+        }
+        .map{
+                
+                .title{
+                        
+                        h1{
+                                @apply font-coustard text-4xl;
+                               
+                        }
+                        
+                }
+               
+        }
+        .thirsty{
+                .text{
+                        .heading{
+                                h1{
+                                        @apply text-[60px];
+                                }
+                                
+                        }
+                        .button{
+                                // @apply text-[20px];
+                        }
+                }
+                
+                img{
+                        @apply h-[300px];
+                }
+        }
+        .navfull{
+                @apply h-[60px];
+                .navbar{
+                        .left, .right{
+                                
+                                        p{
+                                                @apply text-[13px];
+                                        }
+                                       
+                                
+                        }
+                }
+        }
+        .contact{
+                .devide{
+                        @apply flex flex-col items-center justify-center gap-7;
+                        .half{
+                                @apply w-full;
+                                
+                        }
+                        
+                }
+                .locate{
+                        .mem{
+                                @apply flex flex-col;
+                                .part1{
+                                        @apply p-0;
+                                }
+                                .part2{
+                                        @apply flex justify-start ;
+                                        .text{
+                                                @apply items-start;
+                                        }
+                                }
+                        }
+                        
+                        
+                }
+                .faq{
+                        display: flex !important;
+                        @apply flex-col h-[600px] gap-0;
+                        .box1{
+                                @apply flex justify-center;
+                                small{
+                                        width: 100%;
+                                }
+                        }
+                }
+        }
+
+        
+  }
+
+  @media only screen and (max-width:980px) {
+        .container{
+                max-width: 700px;
+        }
+        .logo{
+                @apply w-[100px]
+        }
+        .header2{
+                .info{
+                        @apply flex justify-center items-center gap-[20px] 
+                }
+                h1{
+                        @apply text-5xl
+                }
+                .button{
+                        @apply bg-white py-2 px-4 rounded-3xl w-fit font-onest font-bold uppercase text-sm text-dark-blue;
+                }
+        }
+        .about{
+                .container{
+                        @apply gap-5 w-full;
+                        small{
+                                @apply text-base;
+                        }
+                        h1{
+                                @apply text-4xl w-full;
+                        }
+                        p{
+                                @apply text-base w-full;
+                        }
+                        .button{
+                                @apply text-sm;
+                        }
+                }
+                img{
+                        display: none;
+                 }
+        }
+        .page{
+                .img1{
+                        display: none;
+                }
+                .img2{
+                        display: none;
+                }
+        }
+        .gallery{
+                @apply h-fit;
+                .elements{
+                        height: 1200px;
+                        grid-template-rows: repeat(4, 1fr);
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-areas: 
+                    "box1 box1 box2 box2"
+                    "box3 box3 box4 box4 "
+                    "box5 box5 box6 box6"
+                    "box7 box7 box8 box8"
+                    ;
+                    .v1{
+                        @apply top-[250px] h-[100px]
+                    }
+                    .v3{
+                        @apply top-[500px] h-[100px]
+                    }
+                    .v2{
+                        display: none;
+                    }
+                    
+                }
+        }
+  }
+  @media (max-width: 750px){
+        .container{
+                max-width: 600px;
+        }
+        .history{
+                @apply bg-dark-blue;
+                .aux{
+                        display: flex ;
+                        @apply justify-center items-center container mx-auto;
+                        .v1{
+                                display: none;  
+                        }
+                        .v2{
+                                  @apply h-full ;      
+                        }
+                              
+                }
+                .leaf{
+                        display: none;
+                }
+                  
+                
+                .img1{
+                        @apply -right-[0px]
+                }
+        }
+        .slider{
+                .img1{
+                        @apply -left-[250px]
+                }
+
+                .part{
+                        .container2{
+                                .title2{
+                                        @apply text-5xl;
+                                }
+                                .subtitle{
+                                        @apply text-4xl;
+                                }
+                                .info{
+                                        .box{
+                                                @apply w-[100px];
+                                               p{
+                                                display: none;
+                                               }
+                                        }
+                                }
+                                .indicators{
+                                        @apply gap-4;
+                                        .indicator{
+                                                @apply h-[30px] w-[30px];
+                                        }
+                                        .active{
+                                                @apply h-[45px] w-[45px]
+                                        }
+                                }
+                        }
+                }
+                .grid-bento{
+                        // @apply justify-center items-center w-full  mx-auto gap-3 ;
+                        @apply gap-2;
+                        grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                
+                grid-template-areas: 
+                        "part1 part5"
+                        "part1 part5"
+                        "part2 part2"
+                        "part2 part2"
+                        "part3 part4"
+                        "part3 part4"
+                        "part6 part4"
+                        "part6 part7";
+                        .part7{
+                                // p{
+                                //        @apply text-[10px]
+                                // }
+                       }
+                }
+        }
+        footer{
+                .test{
+                        .middle{
+                                @apply grid-cols-2 gap-5
+                        }
+                }
+        }
+        .thirsty{
+                .text{
+                        .heading{
+                                h1{
+                                        @apply text-[40px];
+                                }
+                                
+                        }
+                        .button{
+                                @apply text-[15px];
+                        }
+                }
+                
+                img{
+                        @apply h-[250px];
+                }
+        }
+        
+    }
+  @media (max-width: 500px){
+        .container{
+                @apply w-[390px]
+        }
+    
+        .navbar {
+                .left, .right{
+                        @apply hidden;
+                }
+           
+        }
+    
+        .menu-btn{
+            @apply flex;
+        }
+    
+        .menu{
+            @apply flex;
+
+        }
+        .catalog{
+                @apply flex gap-6 justify-center items-center;
+                .main{
+                        @apply grid-cols-1 
+                }
+                .side{
+                        display: none;
+                        div{
+                                p{
+                                        @apply text-sm;
+                                }
+                                select{
+                                        @apply w-[80px]
+                                }
+                        }
+                        .input-min{
+                                @apply w-[100px]
+                        }
+                        .input-max{
+                                @apply w-[100px]
+                        }
+                        
+                }
+        }
+        footer{
+                .test{
+                        .middle{
+                                @apply grid-cols-2 gap-5
+                        }
+                        .upper{
+                                @apply flex-col items-center;
+                        }
+                        .photos{
+                                @apply flex-col;
+                        }
+                }
+        }
+        .gallery{
+                @apply h-fit;
+                .elements{
+                        height: 2000px;
+                        grid-template-rows: repeat(8, 1fr);
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-areas: 
+                    "box1 "
+                    "box2 "
+                    "box3 "
+                    "box4 "
+                    "box5 "
+                    "box6 "
+                    "box7 "
+                    "box8 "
+                    ;
+                    .v1{
+                       display: none;
+                    }
+                    .v3{
+                        display: none;
+                    }
+                    .v2{
+                        display: none;
+                    }
+                    
+                }
+        }
+        .contact{
+                .devide{
+                        .half{
+                                .big{
+                                        @apply grid-cols-1 gap-3;
+                                }
+                        }
+                        
+                }
+                .locate{
+                        .mem{
+                                .part2{
+                                        display: none;
+                                 }
+                        }
+                                
+                        
+                }
+                .faq{
+                        @apply h-[700px]
+                }
+        }
+    }
+
+    @media (max-width: 400px){
+        .container{
+                @apply w-[300px]
+        }
+    }

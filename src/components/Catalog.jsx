@@ -61,22 +61,10 @@ export default function Catalog({catalog}){
 
     const [filters, setFilters] = useState({
         type: "",
-        ratings: [],
         minPrice: 0,
         maxPrice: 0
     })
-    const manageRating = (ev) => {
-        const ratingValue = +ev.target.value
-        let updatedRatings
-
-        if (filters.ratings.includes(ratingValue)) {
-            updatedRatings = filters.ratings.filter(rating => rating !== ratingValue)
-        } else {
-            updatedRatings = [...filters.ratings, +ratingValue]
-        }
-        
-        setFilters({...filters, ratings: updatedRatings})
-    }
+    
     useEffect(() => {
         let tempCatalog = catalog
 
@@ -84,9 +72,7 @@ export default function Catalog({catalog}){
             tempCatalog = tempCatalog.filter(beer => beer.type.toLowerCase() === filters.type.toLowerCase())
         }
 
-        // if (filters.ratings.length > 0) {
-        //     tempCities = tempCities.filter(city => filters.ratings.includes(city.rating))
-        // }
+        
 
         if (filters.minPrice > 0) {
             tempCatalog = tempCatalog.filter(beer => beer.price>= +filters.minPrice)
@@ -107,62 +93,48 @@ export default function Catalog({catalog}){
                     <div className="">
                         <div className="catalog">
                             <div className="side">
-                                <h1 className="">Filters</h1>
+                                {/* <h1 className="font-coustard text-2xl text-dark-blue">Filters</h1> */}
                                 <div>
+                                    <p className="title font-coustard text-2xl text-dark-blue">Types</p>
                                     <select onChange={(ev) => {
                                         setFilters({...filters, type: ev.target.value})
-                                    }}>
+                                    }} className="block py-2.5 px-0 text-sm text-dark-blue bg-transparent border-0 border-b-2 border-dark-blue dark:text-dark-blue dark:border-dark-blue focus:outline-none focus:ring-0 focus:border-dark-blue peer w-[100px]">
+                                        <option value="">All</option>
                                         <option value="light">Light</option>
                                         <option value="dark">Dark</option>
-                                        <option value="">All</option>
+                                        
                                     </select>
-                                    {/* <div>
-                                        <label htmlFor="rating-1">
-                                            Rating 1
-                                            <input type="chackbox" name="rating[]" id="rating-1"  value="1"/>
-                                        </label>
-                                        <label htmlFor="rating-2">
-                                            Rating 2
-                                            <input type="chackbox" name="rating[]" id="rating-2"  value="2"/>
-                                        </label>
-                                        <label htmlFor="rating-3">
-                                            Rating 3
-                                            <input type="chackbox" name="rating[]" id="rating-3"  value="3"/>
-                                        </label>
-                                        <label htmlFor="rating-4">
-                                            Rating 4
-                                            <input type="chackbox" name="rating[]" id="rating-4"  value="4"/>
-                                        </label>
-                                        <label htmlFor="rating-1">
-                                            Rating 5
-                                            <input type="chackbox" name="rating[]" id="rating-5"  value="5"/>
-                                        </label>
-                                    </div> */}
-
+                                    
+                                    <p className="title font-coustard text-2xl text-dark-blue pt-5">Price</p>
                                     <div>
-                                        <div className="price-input">
-                                            <input type="number" placeholder="minPrice" onChange={(ev) => setFilters({...filters, minPrice: ev.target.value})} value={filters.minPrice} className="input-min"/>
-                                            <input type="number" placeholder="maxPrice" onChange={(ev) => setFilters({...filters, maxPrice: ev.target.value})} value={filters.maxPrice} className="input-max"/>
+                                        <div className="price-input pt-4">
+                                            {/* <input type="number" placeholder="minPrice" onChange={(ev) => setFilters({...filters, minPrice: ev.target.value})} value={filters.minPrice} className="input-min"/>
+                                            <input type="number" placeholder="maxPrice" onChange={(ev) => setFilters({...filters, maxPrice: ev.target.value})} value={filters.maxPrice} className="input-max"/> */}
+                                            <div class="relative z-0 w-full mb-5 group ">
+                                            <input type="number" onChange={(ev) => setFilters({...filters, minPrice: ev.target.value})} value={filters.minPrice} name="floating_email" id="floating_email" className="input-min block py-2.5 px-0 w-[150px] text-sm text-dark-blue bg-white border-0 border-b-2 border-dark-blue  focus:outline-none focus:ring-0 focus:border-white peer z-0" placeholder=" " required />
+                                            <label for="floating_email" className="peer-focus:font-medium absolute text-sm text-dark-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Min Price</label>
+                                            </div>
+                                            <div class="relative z-0 w-full mb-5 group">
+                                            <input type="number" nChange={(ev) => setFilters({...filters, maxPrice: ev.target.value})} value={filters.maxPrice} name="floating_email" id="floating_email" className="input-max block py-2.5 px-0 w-[150px] text-sm text-dark-blue bg-white border-0 border-b-2 border-dark-blue  focus:outline-none focus:ring-0 focus:border-white peer z-0" placeholder=" " required />
+                                            <label for="floating_email" className=" peer-focus:font-medium absolute text-sm text-dark-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Max Price</label>
+                                        </div>
                                         </div>
                                         
 
-                                        {/* <div className="slider">
-                                            <div className="progress">
-
-                                            </div>
-                                        </div> */}
-                                        {/* <div className="range-input">
-                                            <input type="range" className="range-min" min="0" max="100" value="5" step="1"/>
-                                            <input type="range" className="range-max" min="0" max="100" value="100" step="1" />
-                                        </div> */}
+                                        
                                     </div>
                                 </div>
-                                <button>Reset</button>
+                                {/* <button className="text-white bg-dark-blue hover:bg-dark-blue focus:ring-4 focus:outline-none focus:ring-dark-blue font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Reset</button> */}
                             </div>
                             <div className="main">
                                 {
                                      
-                                        catalogBeers.map(item => <BeerSm item={item} />)
+                                        catalogBeers.map((test, index) =>{
+                                            return(
+                                                <BeerSm test={test} key={index} />
+                                            )
+                                            
+                                        } )
                                     
                                 }
                                 

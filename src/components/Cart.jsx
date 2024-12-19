@@ -5,74 +5,24 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
-
-export default function Cart({aux}) {
-    const [showLoginMenu, setShowLoginMenu] = useState(false)
-//     let cart = []
-
-//     function addToCart(){
-//       const itemCartBtns = document.getElementsByClassName("item-cart-btn")
+import { useCart } from 'react-use-cart';
+import { div, h1, p } from 'framer-motion/client';
   
-//       Array.from(itemCartBtns).forEach(carBtn =>{
-//           carBtn.addEventListener("click", ()=>{
-//               let itemId = +carBtn.getAttribute("data-item-id")
-//               let car = aux.find(car => car.id === itemId)
-              
-//               let cartItem = cart.find(carItem => carItem.id === car.id)
-//               if (cartItem){
-//                   cart = cart.map(c => {
-//                       if(c.id === car.id){
-//                           return{
-//                               ...c,
-//                               quantity: c.quantity +1
-//                           }
-//                       }
-//                       return c
-//                   })
-//               } else{
-//                   cart.push({
-//                       ...car,
-//                       quantity:1
-//                   })
-//               }
-              
-//               displayCart()
-//           })
-//       })
-//   }
-//   function displayCart(){
-//     let carItemHTML = cart.map(carItem => `
-//         <div class='cart-item' data-cart-item-id='${carItem.id}'>
-//             <img src='images/${carItem.images[0]}' alt='Cart Item Image'>
-//             <div>
-//                 <h3>${carItem.make} ${carItem.model}</h3>
-//                 <p>
-//                     <i class="fa-solid fa-dollar-sign"></i>
-//                     <span>${carItem.price}</span>
-//                 </p>
-//             </div>
-//             <div>
-//                 <button class="cart-item-btn cart-btn-minus">
-//                     <i class="fa-solid fa-minus"></i>
-//                 </button>
-                
-//                 <p>${carItem.quantity}</p>
-//                 <button class="cart-item-btn cart-btn-plus">
-//                     <i class="fa-solid fa-plus"></i>
-//                 </button>
-//             </div>
-//             <div>
-//                 <button class="cart-item-btn cart-btn-delete">
-//                     <i class="fa-solid fa-trash"></i>
-//                 </button>
-//             </div>
-//         </div>
-//         `)
-//     cartMain.innerHTML = carItemHTML.join("")
-//     getAllMinusBtns()
-//     getAllPlusBtns()
-//     getDeleteBtns()
-// }
+
+export default function Cart() {
+    let {
+      isEmpty,
+      totalUniqueItems,
+      items,
+    totalItems,
+  cartTotal,
+updateItemQuantity,
+removeItem,
+emptyCart} = useCart()
+// if(isEmpty) return <h1>Ypur CArt is Empty</h1>
+// items = []
+    const [showLoginMenu, setShowLoginMenu] = useState(false)
+console.log(items)
   return (
     // <div>
     //     {
@@ -86,12 +36,23 @@ export default function Cart({aux}) {
                     <div className='top flex justify-center items-center flex-col'>
                         <h1>Cosul Dvs.</h1>
                         <div className='aux'>
-                            <small>1 produs</small>
+                            <small>Cart ({})</small>
                             <p>MDL 35</p>
                         </div>
                     </div>
                     <div className="item">
-                        
+                        {
+                            items.map((test)=>{
+                              return(
+                                <div>
+                                    <p>{test.name}</p>
+                                    <p>{test.price}</p>
+                                </div>
+                                
+                              )
+                              
+                            })
+                        }
                     </div>
                     <div className='livrare'>
                         <small>Total:</small>
