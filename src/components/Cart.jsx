@@ -41,7 +41,7 @@ console.log(items)
                         </div>
                     </div>
                     <div className="item">
-                        {
+                        {/* {
                             items.map((test)=>{
                               return(
                                 <div>
@@ -52,7 +52,7 @@ console.log(items)
                               )
                               
                             })
-                        }
+                        } */}
                     </div>
                     <div className='livrare'>
                         <small>Total:</small>

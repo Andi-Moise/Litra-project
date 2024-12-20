@@ -27,7 +27,7 @@ export default function Visits() {
                             <p className='w-3/4'>Whether you’re new to the world of craft beer or have always wanted to check out the Spoetzl Brewery, a visit to Shiner is a must-do experience. We strongly suggest reserving your spot for our engaging tours, which include everything from exploring hops to enjoying nature walks, and of course, savoring a variety of our delicious beers.</p>
                             <p className='hide w-3/4'>Space on each tour is limited, and reservations are strongly encouraged. Make yours below. Looking to book a private tour? Check out our options below</p>
                         </div>
-                        <div className="part items-center gap-4">
+                        <div className="part v2 items-center gap-4">
                             <div className='picture'>
                             <img src="https://scontent.fkiv9-1.fna.fbcdn.net/v/t39.30808-6/461990025_2788454004654487_7758908789542305113_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=2SVy41DtIvYQ7kNvgHWU_ck&_nc_zt=23&_nc_ht=scontent.fkiv9-1.fna&_nc_gid=AflHK70TonnyzHbQ951RzAJ&oh=00_AYC7LVHwAUK_ZKEwCBaWWJftgcMzWCFEFdtqOTFNEYVNgw&oe=6766033B" alt="" />
                             </div>
@@ -39,7 +39,7 @@ export default function Visits() {
                         </div>
                     </div>
                     <div className="booking relative overflow-hidden">
-                        <h1 className='absolute text-[450px] text-white  inset-0 flex  justify-center  -top-[250px] text-center font-bold opacity-50 font-'>BOOKING</h1>
+                        <h1 className='back absolute text-[450px] text-white  inset-0 flex  justify-center  -top-[250px] text-center font-bold opacity-50 font-'>BOOKING</h1>
                         <div className='h-[200px]'>
 
                         </div>
@@ -76,7 +76,7 @@ export default function Visits() {
                                         <div class="grid md:grid-cols-2 md:gap-6">
                                             <div class="relative z-0 w-full mb-5 group">
                                                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" className="block py-2.5 px-0 w-full text-sm text-white bg-dark-blue border-0 border-b-2 border-white  focus:outline-none focus:ring-0 focus:border-white peer z-0" placeholder=" " required />
-                                                <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Phone number (123-456-7890)</label>
+                                                <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10">Phone number</label>
                                             </div>
                                             <div class="relative z-0 w-full mb-5 group">
                                                 <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-white bg-dark-blue border-0 border-b-2 border-white  focus:outline-none focus:ring-0 focus:border-white peer z-0" placeholder=" " required />

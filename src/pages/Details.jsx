@@ -43,7 +43,7 @@ export default function Details(){
                                 <img src={beer.catalogimg} alt="" />
                             </div>
                             <div className="part">
-                                <h1>{beer.name}</h1>
+                                <h1 className=" text-dark-blue">{beer.name}</h1>
                                 <div className="variants">
                                     <div className="box special" >1 x 330 ml - {beer.price} MDL</div>
                                     <div className="box">4 x 330 ml - {beer.price * 4} MDL</div>
@@ -52,11 +52,18 @@ export default function Details(){
                                     <div className="box">24 x 330 ml - {beer.price * 24} MDL</div>
                                 </div>
                                 <p className="description">{beer.description}</p>
-                                <div>
-                                    
+                                <div className="aux">
+                                <button
+              onClick={() => addItem(test)} // Fixed here
+              className="w-1/2 item-cart-btn card-button card-button-primary"
+            >
+              Add to Cart
+            </button>
                                 </div>
+                               
                             </div>
                         </div>
+                        {/* <div className="gap"></div> */}
                         <div className="info">
                             <h1>Note de degustare</h1>
                             <div className="bento">
@@ -70,7 +77,7 @@ export default function Details(){
                                 </div>
                                 <div className="box">
                                 <h2>taste</h2>
-                                <p>{beer.taste}</p>
+                                <p className="text-center">{beer.taste}</p>
                                 </div>
                                 <div className="box">
                                 <h2>bitterness</h2>
@@ -86,6 +93,7 @@ export default function Details(){
                             <div className="box"><p>Alex</p></div>
                             <div className="box"><p>Alex</p></div>
                         </div> */}
+                        <div className="gap"></div>
                         <div className="fabricare">
                             <h1>CUM FABRICAM</h1>
                             <h1>NOI BERILE NOASTRE ?</h1>

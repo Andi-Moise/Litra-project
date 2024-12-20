@@ -20,7 +20,7 @@ export default function Gallery() {
         {
                 gallery ?
                 (
-                    <div className='page relative overflow-hidden'>
+                    <div className='page relative overflow-hidden bg-white-dark -z-0'>
                         <img src={Layer_2} alt="" className='img1 absolute top-0 -right-[100px] h-[800px] -z-10 over'/>
                         <img src={Layer_3} alt="" className='img2 absolute top-[750px] -left-[100px] h-[700px] -z-10'/>
                         <Navbar/>

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../assets/Header.png'
 // import Header2 from '../assets/Header2.png'
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export default function Header2() {
   return (
@@ -15,7 +16,9 @@ export default function Header2() {
         </div>
         
         {/* <p className='z-10 text-white'>Bere radicală pentru oameni radicali</p> */}
-        <p className="button z-10 flex gap-2 items-center">Descopera <FaArrowRight /></p>
+        <Link className='z-10 cursor-pointer' to={"/gallery"}>
+        <p className="button z-10 flex gap-2 items-center">Descopera <FaArrowRight /></p></Link>
+        
       </div>
     </div>
   )

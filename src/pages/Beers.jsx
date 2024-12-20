@@ -50,7 +50,7 @@ function addToCart(){
              {
                 catalog ?
                 (
-                    <div >
+                    <div className=" bg-white-dark">
                         <CartProvider>
                         <Navbar/>
                         <Catalog catalog={catalog}/>

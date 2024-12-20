@@ -103,10 +103,7 @@ export default function Navbar({beers}){
                         </Link>
                         
                         
-                        {/* <Link to={""} className="flex items-center gap-1 text-white">
-                            <p className="font-medium">RO</p>
-                            <IoIosArrowDown className="text-sm text-yellow" />
-                        </Link> */}
+                        
                     </ul>
                         
                 </nav>
